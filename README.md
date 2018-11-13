@@ -4,7 +4,7 @@
 
 ### Overview
 
-I employed HTML, CSS, JavaScript, and jQuery to make a points-based puzzle game called Crystal Collector. The point of this exercise was to use jQuery logic to assign random number values to buttons at the start of each new game, generate a random number to strive towards, and compare the user's input the randomly generated 'goal' number. It's like Blackjack, except the values of the player's cards change every game, and the number to win changes every game.
+I employed HTML, CSS, JavaScript, and jQuery to make a points-based puzzle game called Crystal Collector. The point of this exercise was to use jQuery logic to assign random number values to buttons at the start of each new game, generate a random number to strive towards, and compare the user's input to the randomly generated 'goal' number. It's like Blackjack, except the values of the player's cards change every game, and the number to win changes every game.
 
 ### Gameplay:
 
