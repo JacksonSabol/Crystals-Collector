@@ -67,7 +67,7 @@ function beginGame() {
 // Define function to collect data from user clicks on crystals for comparison to randomly generated number to guess
 function clickCrystal() {
     // Clear game-over span if it's populated by a previous win or loss
-    $("#game-over").text("------------------------------");
+    $("#game-over").html("<h2><strong> ------------------------------ </strong></h2>");
     // Assign the randomly generated number from the crystals clicked on to a variable - see final statement of beginGame function
     var crystalValue = ($(this).attr("data-crystalvalue"));
     // Values returned from an ID are strings, so convert them to an integer
@@ -81,7 +81,7 @@ function clickCrystal() {
     // Add win condition for when the player's total score is exactly equal to the randomly generated number to guess
     if (userTotal === numberToGuess) {
         // Publish win text to HTML
-        $("#game-over").text("You've acheived a perfect balance of energy, allowing you to exist in all realms simultaneously. Hallowed are the Autumn People.");
+        $("#game-over").html("<h4><strong> You've acheived a perfect balance of energy, allowing you to exist in all realms simultaneously. Hallowed are the Autumn People. </strong></h4>");
         // Increment the number of wins by 1 for score keeping
         wins++;
         // Publish the number of wins to the respective span in the HTML
@@ -94,7 +94,7 @@ function clickCrystal() {
     // Add loss condition for when the player's total score is over the randomly generated number to guess
     else if (userTotal > numberToGuess) {
         // Publish loss text to HTML
-        $("#game-over").text("You've exceeded allowable Psionic energy levels and opened a portal to the Underverse. The Shadow Children come pouring out and ravage the Earth.");
+        $("#game-over").html("<h4><strong> You've exceeded allowable Psionic energy levels and opened a portal to the Underverse. The Shadow Children come pouring out and ravage the Earth.</strong></h4>");
         // Increment the number of losses by 1 for score keeping
         losses++;
         // Publish the number of losses to the respective span in the HTML
