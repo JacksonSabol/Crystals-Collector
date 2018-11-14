@@ -36,10 +36,18 @@ h2, h3, h4, h5 {
 
  #crystals {
 	position: absolute;
-	top: 0px;
+    top: 0px;
+    width: 100%;
 }
 
 .crystal-image {
     height: 150px;
 	width: 150px;
+}
+
+/* Styling right 2 images to position them on the right side of the container */
+#img2, #img3 {
+    float: right;
+    /* position: relative;
+    right: 0px; */
 }
