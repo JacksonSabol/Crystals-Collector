@@ -76,4 +76,30 @@ function clickCrystal() {
     userTotal = userTotal + crystalValue;
     // Display the player's score on the page
     $("#user-total").text(userTotal);
+    // Add win condition for when the player's total score is exactly equal to the randomly generated number to guess
+    if (userTotal === numberToGuess) {
+        // Publish win text to HTML
+        $("#game-over").text("You've acheived a perfect balance of energy, allowing you to exist in all realms simultaneously. Hallowed are the Autumn People.");
+        // Increment the number of wins by 1 for score keeping
+        wins++;
+        // Publish the number of wins to the respective span in the HTML
+        $("#wins").text(wins);
+        // Empty the div that holds the crystal images and their associated values to 'start the game over'
+        $("#crystals").empty();
+        // Call beginGame function to restart
+        beginGame();
+    }
+    // Add loss condition for when the player's total score is over the randomly generated number to guess
+    else if (userTotal > numberToGuess) {
+        // Publish loss text to HTML
+        $("#game-over").text("You've exceeded allowable Psionic energy levels and opened a portal to the Underverse. The Shadow Children come pouring out and ravage the Earth.");
+        // Increment the number of losses by 1 for score keeping
+        losses++;
+        // Publish the number of losses to the respective span in the HTML
+        $("#losses").text(losses);
+        // Empty the div that holds the crystal imges and their associated values to 'start the game over'
+        $("#crystals").empty();
+        // Call beginGame function to restart
+        beginGame();
+    }
 };
