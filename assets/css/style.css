@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/background.jpg");
+ }
+
+h1 {
+    text-align: center;
+    color: rgb(238, 106, 220);
+    text-shadow: 2px 2px rgb(56,139,172);
+} 
+
+h2, h3, h4, h5 {
+    text-align: center;
+    color: rgb(238, 106, 220);
+    /* text-shadow: 1px 2px #ffffff; */
+}
+
+ .bg-opacity {
+     background-color: rgb(54, 54, 54);
+     line-height: 1.5;
+     margin-top: 17rem;
+     margin-bottom: 2rem;
+     border-radius: .3rem;
+     display: block;
+     box-sizing: border-box;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";       /* IE 8 */
+    filter: alpha(opacity=70);  /* IE 5-7 */
+    -moz-opacity: 0.70;          /* Netscape */
+    -khtml-opacity: 0.70;        /* Safari 1.x */
+    opacity: 0.70;               /* Good browsers */
+ }
