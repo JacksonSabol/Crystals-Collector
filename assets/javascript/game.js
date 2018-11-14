@@ -46,7 +46,7 @@ function beginGame() {
     // Call clickCrystal function by clicking on any img with the class of .crystal-image to begin assessment of crystal values
     $(".crystal-image").on("click", clickCrystal);
 
-    // Notes to self:
+    // Notes to future self:
     // Figure out a way to prevent Math.random from assigning the same data value to more than 1 crystal
     //
     // Figure out a way to ensure that at least one of the crystals always has a value of 1, just as a win 'fail-safe'
@@ -61,8 +61,6 @@ function clickCrystal() {
     var crystalValue = ($(this).attr("data-crystalvalue"));
     // Values returned from an ID are strings, so convert them to an integer
     crystalValue = parseInt(crystalValue);
-    // Console log for testing
-    console.log(crystalValue);
     // Reassign the player's total to each starting value + the value from each crystal a player clicks on
     userTotal = userTotal + crystalValue;
     // Display the player's score on the page

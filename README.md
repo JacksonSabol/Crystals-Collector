@@ -27,10 +27,16 @@ I employed HTML, CSS, JavaScript, and jQuery to make a points-based puzzle game 
 
    * The app will show the number of games the player wins and loses. 
 
- I employed the use of jQuery's 'attr' and 'addClass' methods, as well as a random number generator, to apply new number values to "crystal" buttons at the start of each game. I then outputted the response to a Bootstrap Jumbotron to act as the User Interface for the game. The code snippet below exemplifies how to assign a random number as a 'value' then append it to an HTML element with a given class:
+ I employed the use of jQuery's 'attr' and 'addClass' methods, as well as a random number generator, to apply new number values to "crystal buttons" at the start of each game. I then outputted the response to a Bootstrap Jumbotron to act as the User Interface for the game. The code snippet below shows how to create new images, link a source file pathway for those images, add classes to those images, assign a random number as a 'value' to those images, then append it to an HTML page:
 
  ``` javascript
-
+for (i = 0; i < crystalImages.length; i++) {
+    var crystalBtn = $("<img>");
+    crystalBtn.attr("src", crystalImages[i]);
+    crystalBtn.addClass("crystal-image");
+    crystalBtn.attr("data-crystalvalue", Math.floor(Math.random() * 12) + 1);
+    $("#crystals").append(crystalBtn);
+};
  ```
 ### Feel free to play around with the game by clicking on a crystal to start a new game!
 
