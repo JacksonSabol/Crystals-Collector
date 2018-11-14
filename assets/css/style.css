@@ -33,3 +33,13 @@ h2, h3, h4, h5 {
      border-width: 1px;
      border-color: rgb(56,139,172); 
  }
+
+ #crystals {
+	position: absolute;
+	top: 0px;
+}
+
+.crystal-image {
+    height: 150px;
+	width: 150px;
+}
