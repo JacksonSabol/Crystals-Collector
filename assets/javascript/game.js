@@ -1,5 +1,6 @@
 // IDs (#) to reference for pushing to HTML elements
 // Spans:
+// generate-crystals - if needed, game could just restart after win or lose by calling beginGame
 // game-over
 // number-to-guess
 // user-total
@@ -46,12 +47,33 @@ function beginGame() {
         $("#crystals").append(crystalBtn);
     };
     // Testing the randomly generated data value for each crystal
-    $(".crystal-image").on("click", function () {
-        var crystalValue = ($(this).attr("data-crystalvalue"));
-        console.log(crystalValue);
-    });
+    // $(".crystal-image").on("click", function () {
+    //     var crystalValue = ($(this).attr("data-crystalvalue"));
+    //     console.log(crystalValue);
+    // });
+
+    // Call clickCrystal function by clicking on any img with the class of .crystal-image to begin assessment of crystal values
+    $(".crystal-image").on("click", clickCrystal);
+
     // Notes to self:
     // Figure out a way to prevent Math.random from assigning the same data value to more than 1 crystal
+    //
     // Figure out a way to ensure that at least one of the crystals always has a value of 1, just as a win 'fail-safe'
+    //
     // Figure out how to move the right two crystal images to the right side of the container so it looks better
+    // maybe this: crystalBtn.attr("id", "i"); then position ids 2 and 3 to the right in the CSS
+};
+
+// Define function to collect data from user clicks on crystals for comparison to randomly generated number to guess
+function clickCrystal() {
+    // Assign the randomly generated number from the crystals clicked on to a variable - see final statement of beginGame function
+    var crystalValue = ($(this).attr("data-crystalvalue"));
+    // Values returned from an ID are strings, so convert them to an integer
+    crystalValue = parseInt(crystalValue);
+    // Console log for testing
+    console.log(crystalValue);
+    // Reassign the player's total to each starting value + the value from each crystal a player clicks on
+    userTotal = userTotal + crystalValue;
+    // Display the player's score on the page
+    $("#user-total").text(userTotal);
 };
