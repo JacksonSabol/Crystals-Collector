@@ -30,7 +30,7 @@ function beginGame() {
     $("#number-to-guess").text(numberToGuess);
     // Reset the player's total even after a game has been played through
     userTotal = 0;
-    // Display the player's reset total on the page in the #total-score span
+    // Display the player's total on the page in the #total-score span for each iteration of clickCrystal and beginGame
     $("#total-score").text(userTotal);
 
     // Iterate through the length of the crystal images array to generate img tags for each crystal, add source attributes, add classes, and assign random number values
@@ -66,6 +66,8 @@ function beginGame() {
 
 // Define function to collect data from user clicks on crystals for comparison to randomly generated number to guess
 function clickCrystal() {
+    // Clear game-over span if it's populated by a previous win or loss
+    $("#game-over").text("------------------------------");
     // Assign the randomly generated number from the crystals clicked on to a variable - see final statement of beginGame function
     var crystalValue = ($(this).attr("data-crystalvalue"));
     // Values returned from an ID are strings, so convert them to an integer
