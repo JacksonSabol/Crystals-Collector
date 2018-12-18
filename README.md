@@ -1,6 +1,6 @@
-# Welcome to Crystal Collector!
+# :crystal_ball: Welcome to Crystal Collector! :crystal_ball:
 
-## The following project is Assignment 4 of the UCB Full Stack Coding Bootcamp
+## The following project is a math puzzle game with a crystals theme
 
 ### Overview
 
@@ -40,7 +40,7 @@ for (i = 0; i < crystalImages.length; i++) {
  ```
 ### Feel free to play around with the game by clicking on a crystal to start a new game!
 
-[Link to my Game](https://jacksonsabol.github.io/unit-4-game/)
+[Link to my Game](https://jacksonsabol.github.io/Crystals-Collector/)
 
 Thank you for reading!
 
